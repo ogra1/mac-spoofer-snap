@@ -13,7 +13,7 @@ After installing the snap connect the necessary network-control and network-obse
 
 Now create a config file with "devicename" "desired mac address" (one line per device) like:
 
-    echo "eth0 b8:27:eb:b4:fe:d2"| sudo tee /var/snap/mac-spoofer/current/config
+    echo "eth0 b8:27:eb:b4:fe:d2"| sudo tee -a /var/snap/mac-spoofer/current/config
 
 and restart the mac-spoofer service ...
 
