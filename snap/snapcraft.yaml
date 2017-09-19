@@ -1,0 +1,28 @@
+name: mac-spoofer
+version: '0.1'
+summary: force a different mac address for your network devices
+description: |
+  While usually MAC addresses are hardware bound, this daemon uses the ip
+  tool to restart your network devices with a different, manually assigned
+  hardware address instead of the one obtained by the hardware.
+
+grade: stable
+confinement: strict
+architectures: [ all ]
+
+apps:
+  mac-spoofer:
+    command: mac-spoofer.sh
+    daemon: simple
+    plugs:
+      - network
+      - network-bind
+      - network-control
+      - network-observe
+
+parts:
+  mac-spoofer:
+    plugin: nil
+    install: |
+      mkdir -p $SNAPCRAFT_PART_INSTALL/bin/
+      cp mac-spoofer.sh $SNAPCRAFT_PART_INSTALL/bin/
