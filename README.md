@@ -1,3 +1,5 @@
+[![Snap Status](https://build.snapcraft.io/badge/ogra1/mac-spoofer-snap.svg)](https://build.snapcraft.io/user/ogra1/mac-spoofer-snap)
+
 # mac-spoofer
 
 This snap allows re-setting mac adresses on your Ubuntu Core device.
